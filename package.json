@@ -1,0 +1,33 @@
+{
+  "name": "cinema-tickets-javascript",
+  "version": "1.0.0",
+  "description": "DWP cinema tickets coding exercise",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "collectCoverageFrom": [
+      "src/pairtest/TicketService.js",
+      "src/pairtest/config/*.js",
+      "src/pairtest/domain/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
